@@ -25,7 +25,7 @@ class SignInButtonBuilder extends StatelessWidget {
 
   /// backgroundColor is required but textColor is default to `Colors.white`
   /// splashColor is defalt to `Colors.white30`
-  final Color iconColor, backgroundColor, splashColor;
+  final Color iconColor, backgroundColor, splashColor, highlightColor;
 
   /// onPressed should be specified as a required field to indicate the callback.
   final Function onPressed;
@@ -57,7 +57,8 @@ class SignInButtonBuilder extends StatelessWidget {
     this.icon,
     this.image,
     this.iconColor = Colors.white,
-    this.splashColor = Colors.white30,
+    this.splashColor,
+    this.highlightColor,
     this.padding,
     this.innerPadding,
     this.mini = false,
@@ -75,15 +76,17 @@ class SignInButtonBuilder extends StatelessWidget {
   /// The build funtion will be help user to build the signin button widget.
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
+    return FlatButton(
       key: key,
-      minWidth: mini ? width ?? 35.0 : null,
-      height: height,
-      elevation: elevation,
+      // Not needed because MaterialButton -> FlatButton
+      // minWidth: mini ? width ?? 35.0 : null,
+      // height: height,
+      // elevation: elevation,
       padding: padding ?? EdgeInsets.all(0),
       color: backgroundColor,
       onPressed: onPressed,
       splashColor: splashColor,
+      highlightColor: highlightColor,
       child: _getButtonChild(context),
       shape: shape ?? ButtonTheme.of(context).shape,
     );

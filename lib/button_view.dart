@@ -35,6 +35,10 @@ class SignInButton extends StatelessWidget {
   // overrides the default button elevation
   final double elevation;
 
+  final Color splashColor;
+
+  final Color highlightColor;
+
   /// The constructor is fairly self-explanatory.
   SignInButton(
     this.button, {
@@ -45,6 +49,8 @@ class SignInButton extends StatelessWidget {
     this.text,
     this.textStyle,
     this.elevation = 2.0,
+    this.splashColor,
+    this.highlightColor,
   })  : assert(button != null),
         assert(onPressed != null),
         assert(mini != true || !(button == Buttons.Google || button == Buttons.GoogleDark),
@@ -87,6 +93,8 @@ class SignInButton extends StatelessWidget {
           innerPadding: EdgeInsets.all(0),
           shape: shape,
           height: 36.0,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.Facebook:
         return SignInButtonBuilder(
@@ -100,6 +108,8 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.GitHub:
         return SignInButtonBuilder(
@@ -113,6 +123,8 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.Apple:
       case Buttons.AppleDark:
@@ -134,6 +146,8 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.LinkedIn:
         return SignInButtonBuilder(
@@ -147,6 +161,8 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.Pinterest:
         return SignInButtonBuilder(
@@ -160,6 +176,8 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.Tumblr:
         return SignInButtonBuilder(
@@ -173,6 +191,8 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.Twitter:
         return SignInButtonBuilder(
@@ -186,6 +206,8 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.Reddit:
         return SignInButtonBuilder(
@@ -199,6 +221,8 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
       case Buttons.Email:
       default:
@@ -213,6 +237,8 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           backgroundColor: Colors.grey[700],
           shape: shape,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
         );
     }
   }
