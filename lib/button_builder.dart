@@ -116,14 +116,19 @@ class SignInButtonBuilder extends StatelessWidget {
                   ),
               child: _getIconOrImage(),
             ),
-            Text(text,
-                style: textStyle ??
-                    TextStyle(
-                      fontFamily: 'Roboto',
-                      color: Colors.white,
-                      fontSize: 14.0,
-                      backgroundColor: Color.fromRGBO(0, 0, 0, 0),
-                    )),
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Text(text,
+                    style: textStyle ??
+                        TextStyle(
+                          fontFamily: 'Roboto',
+                          color: Colors.white,
+                          fontSize: 14.0,
+                          backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+                        )),
+              ),
+            ),
           ],
         ),
       ),
